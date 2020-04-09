@@ -1,0 +1,10 @@
+function fibonacciSequence(number) {
+  let arr = new Array(number);
+  if (number >= 2) {
+    arr.push(arr[--number] + arr[--number]);
+    fibonacciSequence(++number);
+  } else if (number === 1) {
+    arr[0] = 1;
+  }
+  return arr;
+}
