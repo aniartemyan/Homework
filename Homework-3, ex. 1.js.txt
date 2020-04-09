@@ -1,0 +1,18 @@
+function determineAllDigits(number) {
+  
+  let digit = number % 10;
+
+  iet res = false;
+
+  if (digit % 2 !== 0) {
+ 
+   res = true;
+
+    determineAllDigits((number - digit) / 10);
+
+
+  }
+
+
+  return res;
+}
