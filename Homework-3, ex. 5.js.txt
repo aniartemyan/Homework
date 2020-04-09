@@ -1,0 +1,12 @@
+function sumDigits(number) {
+    let sum = 0;
+    let digit = number % 10;
+    sum += digit;
+    if (number - digit !== 0) {
+        sumDigits((number - digit) / 10);
+    }
+    if (sum > 9) {
+        sumDigits(sum);
+    }
+    return sum;
+}
