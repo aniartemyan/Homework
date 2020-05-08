@@ -12,9 +12,7 @@ function binarySearch (arr, num) {
       start = ++midIndex;
     }
   };
-  if (num !== arr[midIndex]) {
-    return (`${num} is not exist`);
-  }
+  return (`${num} is not exist`);
 }
 
 console.log( binarySearch([1, 3, 4, 7, 10], 7) );
