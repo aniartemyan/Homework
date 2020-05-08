@@ -47,20 +47,22 @@ console.log(checkString("12.321"));
 
 // ex. 4
 
-let word = "listen";
-let result;
-
-let wordSort = mergeSort(word);
-["enlists", "google", "inlets", "banana"].forEach((item) => {
-  mergeSort(item);
-});
+function asd(arr, word) {
+  let wordSort = mergeSort(word);
+  
+  for (let item of arr) {
+    debugger;
+    if (wordSort === mergeSort(item)) return wordSort;
+  }
+  return "There is not correct sublist.";
+}
 
 function mergeSort(item) {
-  let str = item.toString;
-  if (str.length <= 1) {
-    return str;
+  debugger;
+  let subArr = item.split("");
+  if (subArr.length <= 1) {
+    return subArr;
   }
-  let subArr = str.split("");
   let mid = Math.floor(subArr.length / 2);
   let left = subArr.slice(0, mid);
   let right = subArr.slice(mid, subArr.length);
@@ -75,10 +77,7 @@ function concater(arr1, arr2) {
       result.push(arr2.shift(arr2[0]));
     }
   }
-  let subArr = result.concat(arr1, arr2)
-  return subArr;
+  let element = result.concat(arr1, arr2)
+  return element;
 }
-
-if (wordSort === concater()) result = concater();
-
-console.log(result);
+console.log(asd(["enlists", "google", "inlets", "banana"], "listen"));
